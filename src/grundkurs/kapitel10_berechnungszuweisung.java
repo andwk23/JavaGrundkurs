@@ -1,6 +1,6 @@
 package grundkurs;
 
-public class kapitel09_DoWhileSchleife {
+public class kapitel10_berechnungszuweisung {
 
 	public static void main(String[] args) {
 		double groesse = 1.68;
@@ -31,8 +31,13 @@ public class kapitel09_DoWhileSchleife {
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + intBMI);
 			}
-			gewicht +=2;
-		}while (gewicht <= 0.0);
+			gewicht +=2.0; // Berechnungszuweisung +=, -=, usw
+			
+			if ((gewicht > 50.) & (gewicht < 72.)) {
+				++gewicht; // Inkrementierungszuweisung, bei Zuweisungen wird sofort inkrementiert und dann zugewiesen
+				gewicht++; // Inkrementierungszuweisung, bei Zuweisungen wird erst zugewiesen und dann inkrementiert
+			}
+		}while (gewicht <= 80.0);
 
 	}
 
