@@ -20,6 +20,12 @@ class kapitel12 {
 		System.out.printf("\nName: %s", meineKatze.name);
 		System.out.printf("\nGewicht: %.2f", meineKatze.gewicht);
 		System.out.printf("\nGröße: %.2f", meineKatze.groesse);
+		
+		// Zugriff auf die Methode BMIRechner
+		System.out.println("\n-----------------------------------------------");
+		BMIRechner bmiRechner = new BMIRechner();
+		double bmi = bmiRechner.rechne(meineKatze.gewicht,meineKatze.groesse);
+		System.out.printf("\nDie Katze %s hat den BMI-Wert %.2f.", meineKatze.name, bmi);
 	}
 
 }
