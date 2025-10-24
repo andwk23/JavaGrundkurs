@@ -2,36 +2,56 @@
 class kapitel12 {
 
 	public static void main(String[] args) {
-		Katze meineKatze = new Katze();
+		Katze[] katze = new  Katze[2];
+		
+		// Katze meineKatze = new Katze();
+		katze[0] = new Katze();
+		katze[1] = new Katze();
 		
 		// Ausgabe der Eigenschaften einer Katze mit vorinitierten Werten
 		System.out.println("\nVordefinierte Werte der Eigenschaften der Klasse Katze");
-		System.out.printf("\nName: %s", meineKatze.name);
-		System.out.printf("\nGewicht: %.2f", meineKatze.gewicht);
-		System.out.printf("\nGröße: %.2f\n", meineKatze.groesse);
+		System.out.printf("Name: %s", katze[0].name);
+		System.out.printf("\nGewicht: %.2f", katze[0].gewicht);
+		System.out.printf("\nGröße: %.2f\n", katze[0].groesse);
 		
-		System.out.println("-----------------------------------------------");
+		System.out.println("\n-----------------------------------------------");
 		
-		//Initierubg der Eigenschaften der Katze 'meineKatze'
-		System.out.println("\nNach Initierung der Eigenschaften von meineKatze");
-		meineKatze.name = "Minki";
-		meineKatze.groesse = 0.51;
-		meineKatze.gewicht = 6.0;
-		System.out.printf("\nName: %s", meineKatze.name);
-		System.out.printf("\nGewicht: %.2f", meineKatze.gewicht);
-		System.out.printf("\nGröße: %.2f", meineKatze.groesse);
+		//Initierubg der Eigenschaften der Katze 'katze[0]'
+		System.out.println("Nach Initierung der Eigenschaften von katze[0]");
+		katze[0].name = "Minki";
+		katze[0].groesse = 0.51;
+		katze[0].gewicht = 6.0;
+		System.out.printf("Name: %s", katze[0].name);
+		System.out.printf("\nGewicht: %.2f", katze[0].gewicht);
+		System.out.printf("\nGröße: %.2f", katze[0].groesse);
+		
+		//Initierubg der Eigenschaften der Katze 'katze[1]'
+				System.out.println("\nNach Initierung der Eigenschaften von katze[1]");
+				katze[1].name = "Flo";
+				katze[1].groesse = 0.48;
+				katze[1].gewicht = 5.2;
+				System.out.printf("Name: %s", katze[1].name);
+				System.out.printf("\nGewicht: %.2f", katze[1].gewicht);
+				System.out.printf("\nGröße: %.2f", katze[1].groesse);
 		
 		// Zugriff auf die Methode BMIRechner
 		System.out.println("\n-----------------------------------------------");
 		BMIRechner bmiRechner = new BMIRechner();
-		double bmi = bmiRechner.rechne(meineKatze.gewicht,meineKatze.groesse);
-		System.out.printf("\nDie Katze %s hat den BMI-Wert %.2f.", meineKatze.name, bmi);
+		double bmi = bmiRechner.rechne(katze[0].gewicht,katze[0].groesse);
+		System.out.println("\n--- Zugriff byValue ---");
+		System.out.printf("Die Katze %s hat den BMI-Wert %.2f.", katze[0].name, bmi);
+		
+		System.out.println("\n-----------------------------------------------");
+		bmi = bmiRechner.rechne(katze[1].gewicht,katze[1].groesse);
+		System.out.println("\n--- Zugriff byValue ---");
+		System.out.printf("Die Katze %s hat den BMI-Wert %.2f.", katze[0].name, bmi);
 		
 		// Zugriff auf die Methode BMIRechnerByReference
 		System.out.println("\n-----------------------------------------------");
 		BMIRechnerByReference bmiRechnerByReference = new BMIRechnerByReference();
-		double bmiByReference = bmiRechnerByReference.rechne(meineKatze);
-		System.out.printf("\nDie Katze %s hat den BMI-Wert %.2f.", meineKatze.name, bmiByReference);
+		System.out.println("\n--- Zugriff byReference für katze[0]---");
+		double bmiByReference = bmiRechnerByReference.rechne(katze[0]);
+		System.out.printf("Die Katze %s hat den BMI-Wert %.2f.", katze[0].name, bmiByReference);
 	}
 
 }
