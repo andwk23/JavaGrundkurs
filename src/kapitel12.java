@@ -44,7 +44,7 @@ class kapitel12 {
 		System.out.println("\n-----------------------------------------------");
 		bmi = bmiRechner.rechne(katze[1].gewicht,katze[1].groesse);
 		System.out.println("\n--- Zugriff byValue ---");
-		System.out.printf("Die Katze %s hat den BMI-Wert %.2f.", katze[0].name, bmi);
+		System.out.printf("Die Katze %s hat den BMI-Wert %.2f.", katze[1].name, bmi);
 		
 		// Zugriff auf die Methode BMIRechnerByReference
 		System.out.println("\n-----------------------------------------------");

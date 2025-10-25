@@ -1,6 +1,6 @@
 
-class Katze {
-	double groesse;
-	double gewicht;
-	String name;
+public class Katze {
+	public double groesse;
+	public double gewicht;
+	public String name;
 }
