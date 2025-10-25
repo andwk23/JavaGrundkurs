@@ -1,26 +1,13 @@
 package de.andeuw23.bmi.model;
 
-public class Katze {
-	private double groesse;
-	private double gewicht;
-	private String name;
-	
-	public double getGroesse() {
-		return groesse;
+public class Katze extends Lebewesen{
+	private Ball ball;
+
+	public Ball getBall() {
+		return ball;
 	}
-	public void setGroesse(double groesse) {
-		this.groesse = groesse;
-	}
-	public double getGewicht() {
-		return gewicht;
-	}
-	public void setGewicht(double gewicht) {
-		this.gewicht = gewicht;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setBall(Ball ball) {
+		this.ball = ball;
 	}
 }
