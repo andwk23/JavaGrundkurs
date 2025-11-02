@@ -71,14 +71,18 @@ class App {
 		System.out.printf("\nGröße: %.4f", lebewesen[2].getGroesse());
 		
 		bmi = bmiRechner.rechne(lebewesen[2]);
-		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f.", lebewesen[2].getName(), bmi);
+		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f\n", lebewesen[2].getName(), bmi);
+		System.out.printf(bmi >= BMIRechner.BMI_MAX ? "Der Fisch %s hat Übergewicht" : bmi > 18.5 ? "Der Fisch %s hat Normalgewicht" : "Der Fisch %s hat Untergewicht", lebewesen[2].getName());
 		
 		System.out.println("\n-----------------------------------------------------------");
 		
 		lebewesen[2].isst();
 		lebewesen[2].isst();
+		lebewesen[2].isst();
+		lebewesen[2].isst();
+		lebewesen[2].isst();
 		
-		System.out.println("\n--- Gewicht nach 2 Mahlzeiten ---");
+		System.out.println("\n--- Gewicht nach 5 Mahlzeiten ---");
 		System.out.printf("Name: %s", lebewesen[2].getName());
 		System.out.printf("\nGewicht vor den Mahlzeiten: %.4f"
 				+ "\nGewicht nach den Mahzeiten: %.4f\n", gewicht[2], lebewesen[2].getGewicht());
@@ -88,7 +92,8 @@ class App {
 		// Aufruf der Klassenmethode rechne1()
 		bmi = BMIRechner.rechne1(lebewesen[2]);
 		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f\n", lebewesen[2].getName(), bmi);
+		System.out.printf(bmi >= BMIRechner.BMI_MAX ? "Der Fisch %s hat Übergewicht" : bmi > 18.5 ? "Der Fisch %s hat Normalgewicht" : "Der Fisch %s hat Untergewicht", lebewesen[2].getName());
 		
-		System.out.println("\n--- Anzahl der Berechnungen: " + BMIRechner.counter + " ---");
+		System.out.println("\n\n\t--- Anzahl der Berechnungen: " + BMIRechner.counter + " ---");
 	}
 }

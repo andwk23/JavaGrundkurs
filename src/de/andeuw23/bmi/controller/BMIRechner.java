@@ -4,6 +4,10 @@ import de.andeuw23.bmi.model.*;
 public class BMIRechner {
 	public static int counter;
 	
+	// Erzeugen einer Konstanten
+	public static final double BMI_MAX = 25.0;
+	public static final double BMI_MIN = 18.5;
+	
 	public double rechne(Lebewesen lebewesen) {
 		double bmi = lebewesen.getGewicht()/(lebewesen.getGroesse() * lebewesen.getGroesse());
 		counter++;
