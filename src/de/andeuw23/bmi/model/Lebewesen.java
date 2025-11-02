@@ -2,7 +2,7 @@ package de.andeuw23.bmi.model;
 
 public class Lebewesen {
 	private double groesse;
-	private double gewicht;
+	protected double gewicht;
 	private String name;
 	
 	public double getGroesse() {
@@ -22,5 +22,11 @@ public class Lebewesen {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public void isst() {
+		
+	}
+	public void isst(double menge) {
+		
 	}
 }

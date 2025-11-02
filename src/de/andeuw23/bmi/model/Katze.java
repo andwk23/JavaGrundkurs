@@ -10,4 +10,14 @@ public class Katze extends Lebewesen{
 	public void setBall(Ball ball) {
 		this.ball = ball;
 	}
+	
+	public void isst() {
+		super.gewicht += 0.1;
+	}
+	public void isst(double menge) {
+		super.gewicht += menge/5;
+	}
+	public void spielt() {
+		super.gewicht -= 0.1;
+	}
 }
