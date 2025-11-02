@@ -1,10 +1,10 @@
 package de.andeuw23.bmi.controller;
 
-import de.andeuw23.bmi.model.Katze;
+import de.andeuw23.bmi.model.*;
 
 public class BMIRechner {
-	public double rechne(Katze katze) {
-		double bmi = katze.getGewicht()/(katze.getGroesse() * katze.getGroesse());
+	public double rechne(Lebewesen lebewesen) {
+		double bmi = lebewesen.getGewicht()/(lebewesen.getGroesse() * lebewesen.getGroesse());
 		return bmi;	
 	}
 }
