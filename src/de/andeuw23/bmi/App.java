@@ -85,7 +85,8 @@ class App {
 		
 		System.out.println("\n-----------------------------------------------------------");
 		
-		bmi = bmiRechner.rechne(lebewesen[2]);
+		// Aufruf der Klassenmethode rechne1()
+		bmi = BMIRechner.rechne1(lebewesen[2]);
 		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f\n", lebewesen[2].getName(), bmi);
 		
 		System.out.println("\n--- Anzahl der Berechnungen: " + BMIRechner.counter + " ---");
