@@ -8,14 +8,15 @@ class App {
 	public static void main(String[] args) {
 		
 		BMIRechner bmiRechner = new BMIRechner();				
-		Lebewesen[] lebewesen = new  Lebewesen[3];
-		Double[] gewicht = new Double[3];
+		Lebewesen[] lebewesen = new  Lebewesen[4];
+		Double[] gewicht = new Double[4];
 
 		lebewesen[0] = new Katze();
 		lebewesen[1] = new Katze();
 		lebewesen[2] = new Fisch();
+		lebewesen[3] = new Katze("Minka", 5.5, 0.58);
 		
-		System.out.println("--- Objekte der Klasse 'Katze' ---");
+		System.out.println("\n--- Objekte der Klasse 'Katze' ---");
 		
 		lebewesen[0].setName("Minki");
 		lebewesen[0].setGroesse(0.51);
@@ -59,6 +60,15 @@ class App {
 		System.out.printf("Name: %s", lebewesen[1].getName());
 		System.out.printf("\nGewicht vor den Mahlzeiten und dem Spielen: %.2f"
 				+ "\nGewicht nach den Mahzeiten und dem Spielen: %.2f", gewicht[1], lebewesen[1].getGewicht());
+		
+		System.out.println("\n-----------------------------------------------------------");
+		
+		System.out.printf("Name: %s", lebewesen[3].getName());
+		System.out.printf("\nGewicht: %.2f", lebewesen[3].getGewicht());
+		System.out.printf("\nGröße: %.2f", lebewesen[3].getGroesse());
+		
+		bmi = bmiRechner.rechne(lebewesen[3]);
+		System.out.printf("\nDie Katze %s hat den BMI-Wert %.2f.", lebewesen[3].getName(), bmi);
 		
 		System.out.println("\n\n--- Objekte der Klasse 'Fisch' ---");
 		
