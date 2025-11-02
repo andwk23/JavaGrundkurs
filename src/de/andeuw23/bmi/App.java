@@ -63,15 +63,15 @@ class App {
 		System.out.println("\n\n--- Objekte der Klasse 'Fisch' ---");
 		
 		lebewesen[2].setName("Peter");
-		lebewesen[2].setGroesse(0.01);
-		lebewesen[2].setGewicht(0.005);
+		lebewesen[2].setGroesse(0.022);
+		lebewesen[2].setGewicht(0.0089);
 		gewicht[2] = lebewesen[2].getGewicht();
 		System.out.printf("Name: %s", lebewesen[2].getName());
 		System.out.printf("\nGewicht: %.4f", lebewesen[2].getGewicht());
 		System.out.printf("\nGröße: %.4f", lebewesen[2].getGroesse());
 		
-		bmiRechner.rechne(lebewesen[2]);
-		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.2f.", lebewesen[2].getName(), bmi);
+		bmi = bmiRechner.rechne(lebewesen[2]);
+		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f.", lebewesen[2].getName(), bmi);
 		
 		System.out.println("\n-----------------------------------------------------------");
 		
@@ -81,9 +81,13 @@ class App {
 		System.out.println("\n--- Gewicht nach 2 Mahlzeiten ---");
 		System.out.printf("Name: %s", lebewesen[2].getName());
 		System.out.printf("\nGewicht vor den Mahlzeiten: %.4f"
-				+ "\nGewicht nach den Mahzeiten: %.4f\n", gewicht[2], lebewesen[2].getGewicht());				
+				+ "\nGewicht nach den Mahzeiten: %.4f\n", gewicht[2], lebewesen[2].getGewicht());
+		
+		System.out.println("\n-----------------------------------------------------------");
+		
+		bmi = bmiRechner.rechne(lebewesen[2]);
+		System.out.printf("\nDer Fisch %s hat den BMI-Wert %.4f\n", lebewesen[2].getName(), bmi);
+		
+		System.out.println("\n--- Anzahl der Berechnungen: " + BMIRechner.counter + " ---");
 	}
-	
-	
-
 }
